@@ -1,0 +1,107 @@
+* {
+   margin: 0; 
+   padding: 0; 
+   box-sizing: border-box;
+   font-family: 'Inter', sans-serif;
+   text-align: center;
+}
+:root {
+   --darkblue: #090B1A;
+   --blue: #1B1938;
+   --violet: #AA5CDB;
+   --darkviolet: hsl(285, 100%, 30%);
+}
+body {
+   background-color: var(--darkblue);
+   width: 100%;
+   min-height: 100vh;
+   display: flex;
+   font-size: 15px;
+   color: white;
+}
+.container {
+   width: 85%;
+   margin: auto;
+   background-color: var(--blue);
+   overflow: hidden;
+   border-radius: 10px;
+   display: grid;
+}
+.image {
+   width: 100%;
+   
+   margin-bottom: 40px;
+   background-image: url("/images/image-header-mobile.jpg");
+   background-position: bottom center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+.filter {
+   width: 100%;
+   height: 240px;
+   background-color: var(--darkviolet);
+   opacity: 0.5;
+}
+h1, p {
+   padding: 0 20px;
+}
+p {
+   line-height: 2;
+   margin: 20px 5px 40px;
+   opacity: 0.75;
+}
+h1 span {color: var(--violet)}
+.card {
+   width: 20%;
+   margin: auto;
+   margin-bottom: 30px;
+   font-size: 17px;
+   line-height: 25px;
+}
+div span {
+   font-variant: small-caps;
+   opacity: 0.6;
+   letter-spacing: 2px;
+}
+div b {
+   font-size: 25px;
+}
+
+@media (min-width: 600px) {
+   * {}
+   .container, .image, .filter {height: 51vh;}
+   .container {
+      width: 77vw;
+      grid-template-columns: repeat(2,1fr);
+      grid-template-rows: repeat(3,1fr);
+      grid-template-areas: 
+         "header  image"
+         "message image"
+         "stats   image"
+      ;
+   }
+   .image {
+      grid-area: image;
+      margin-bottom: 0;
+   }
+   h1 {grid-area: header; font-size: 2.4em; align-self: end;}
+   p {grid-area: message; text-align: left;}
+   h1, p{
+      text-align: left;
+      padding: 0 68px;
+   }
+   .box {
+      margin: 0 30px 0 68px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      justify-items: start;
+      align-items: center;
+
+   }
+   .card {
+      padding: 0;
+      margin: 0;
+      width: 100px;
+      text-align: left;
+   }
+}
