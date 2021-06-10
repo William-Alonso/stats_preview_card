@@ -30,7 +30,7 @@ body {
 .image {
    width: 100%;
    margin-bottom: 40px;
-   background-image: url("images/image-header-mobile.jpg");
+   background-image: url("blob/images/image-header-mobile.jpg");
    background-position: bottom center;
    background-size: cover;
    background-repeat: no-repeat;
@@ -80,7 +80,7 @@ div b {
          "stats   image";      ;
    }
    .image {
-      background-image: url("images/image-header-desktop.jpg");
+      background-image: url("blob/images/image-header-desktop.jpg");
       grid-area: image;
       margin-bottom: 0;
    }
