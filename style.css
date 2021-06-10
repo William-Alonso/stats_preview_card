@@ -29,7 +29,6 @@ body {
 }
 .image {
    width: 100%;
-   
    margin-bottom: 40px;
    background-image: url("/images/image-header-mobile.jpg");
    background-position: bottom center;
@@ -68,8 +67,9 @@ div b {
 }
 
 @media (min-width: 600px) {
-   * {}
-   .container, .image, .filter {height: 51vh;}
+   .container, .image, .filter {
+      height: 51vh;
+   }
    .container {
       width: 77vw;
       grid-template-columns: repeat(2,1fr);
@@ -77,15 +77,22 @@ div b {
       grid-template-areas: 
          "header  image"
          "message image"
-         "stats   image"
-      ;
+         "stats   image";      ;
    }
    .image {
+      background-image: url("/images/image-header-desktop.jpg");
       grid-area: image;
       margin-bottom: 0;
    }
-   h1 {grid-area: header; font-size: 2.4em; align-self: end;}
-   p {grid-area: message; text-align: left;}
+   h1 {
+      grid-area: header; 
+      font-size: 2.4em; 
+      align-self: end;
+   }
+   p {
+      grid-area: message; 
+      text-align: left;
+   }
    h1, p{
       text-align: left;
       padding: 0 68px;
@@ -96,7 +103,6 @@ div b {
       grid-template-columns: 1fr 1fr 1fr;
       justify-items: start;
       align-items: center;
-
    }
    .card {
       padding: 0;
